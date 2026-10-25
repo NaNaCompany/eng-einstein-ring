@@ -1,0 +1,57 @@
+{
+  "id": "E106",
+  "value": 5.434463526482516e-09,
+  "method": "Independent Python Decimal, precision 80 decimal digits; direct analytic SI equation with binary64 inputs decoded exactly, no JavaScript model imports.",
+  "value_80_digits": "5.4344635264825161244226823437693091449497139208434900053973366177105515506626515E-9",
+  "cases": [
+    {
+      "name": "Four times lens mass doubles angle",
+      "values": {
+        "mass": 7.95388e+30
+      },
+      "expected": 1.0868927052965033e-08
+    },
+    {
+      "name": "Double distances give angle divided by sqrt two",
+      "values": {
+        "lens": 2e+20,
+        "source": 4e+20
+      },
+      "expected": 3.842746011686746e-09
+    },
+    {
+      "name": "Small-angle violation rejected",
+      "values": {
+        "mass": 1e+30,
+        "lens": 100000.0,
+        "source": 200000.0
+      },
+      "throws": true
+    },
+    {
+      "name": "Source at lens rejected",
+      "values": {
+        "lens": 1e+20,
+        "source": 1e+20
+      },
+      "throws": true
+    },
+    {
+      "name": "Foreground source rejected",
+      "values": {
+        "lens": 2e+20,
+        "source": 1e+20
+      },
+      "throws": true
+    },
+    {
+      "name": "Strong field at ring rejected",
+      "values": {
+        "mass": 1e+30,
+        "lens": 10000000000.0,
+        "source": 10000000100
+      },
+      "throws": true
+    }
+  ]
+}

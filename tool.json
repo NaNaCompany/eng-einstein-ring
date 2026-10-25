@@ -1,0 +1,60 @@
+{
+  "id": "E106",
+  "slug": "eng-einstein-ring",
+  "title": "아인슈타인 고리 각반지름 계산기",
+  "title_en": "Einstein Ring Angular Radius Calculator",
+  "category": "우주·천체",
+  "category_en": "Space and astronomy",
+  "fields": [
+    {
+      "key": "mass",
+      "label": "점렌즈 질량 M",
+      "label_en": "Point lens mass M",
+      "dimension": "mass",
+      "example": 1.98847e+30,
+      "constraint": "positive",
+      "display_unit": "kg",
+      "display_value": "1.98847e+30"
+    },
+    {
+      "key": "lens",
+      "label": "관측자에서 렌즈까지 거리 D_L",
+      "label_en": "Observer-to-lens distance D_L",
+      "dimension": "length",
+      "example": 1e+20,
+      "constraint": "positive",
+      "display_unit": "km",
+      "display_value": "1e+17"
+    },
+    {
+      "key": "source",
+      "label": "관측자에서 광원까지 거리 D_S",
+      "label_en": "Observer-to-source distance D_S",
+      "dimension": "length",
+      "example": 2e+20,
+      "constraint": "positive",
+      "display_unit": "km",
+      "display_value": "2e+17"
+    }
+  ],
+  "result_label": "고리 각반지름 θ_E",
+  "result_label_en": "Einstein ring angular radius θ_E",
+  "result_dimension": "angle",
+  "formula": "θ_E = √[(4GM/c²)(D_S−D_L)/(D_L D_S)]",
+  "purpose": "관측자·점렌즈·광원이 정렬된 근거리 유클리드 기하에서 아인슈타인 고리의 각반지름을 계산한다.",
+  "purpose_en": "Calculate the Einstein ring angular radius for an aligned point lens in local Euclidean geometry.",
+  "assumptions": "M>0, D_S>D_L>0. 완전 정렬·점질량·얇은 렌즈·약한장·작은각 근사다. 여기서는 유클리드 거리 D_LS=D_S−D_L를 사용한다. 우주론적 각지름거리에 이 뺄셈을 적용하면 안 된다. 앱은 θ_E≤0.1 rad와 충돌매개변수 b=D_Lθ_E≥100r_s를 요구한다. 광선은 렌즈 물질 바깥을 지나며 가려짐이 없어야 한다. 확장 질량분포·강한장·비정렬·우주 팽창을 제외한다.",
+  "assumptions_en": "Required: M>0 and D_S>D_L>0 with perfect alignment, a point mass and the thin-lens weak-field small-angle approximation. This local Euclidean model sets D_LS=D_S−D_L; this subtraction is invalid for general cosmological angular-diameter distances. The app requires θ_E≤0.1 rad and impact parameter b=D_Lθ_E≥100r_s. Rays must pass outside lens material without occultation. Excluded: extended mass distributions, strong fields, misalignment and cosmic expansion.",
+  "sources": [
+    {
+      "label": "University of Maryland · Point-mass Einstein angular radius, Eq. 7",
+      "url": "https://www.astro.umd.edu/~mcmiller/teaching/astr422/lecture13.pdf"
+    }
+  ],
+  "condition": "근거리 유클리드 거리·완전 정렬·점렌즈·가려짐 없는 외부 광선 조건을 확인했습니다.",
+  "condition_en": "I confirm local Euclidean distances, perfect alignment, a point lens and unocculted rays outside lens material.",
+  "output_unit": "arcsec",
+  "site": "https://nanalab.kr/eng-einstein-ring/",
+  "repository": "https://github.com/NaNaCompany/eng-einstein-ring",
+  "groups": []
+}

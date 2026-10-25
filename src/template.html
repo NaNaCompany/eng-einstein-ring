@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>아인슈타인 고리 각반지름 계산기 · 단위 변환과 공식 | NaNa Lab</title><meta name="description" content="관측자·점렌즈·광원이 정렬된 근거리 유클리드 기하에서 아인슈타인 고리의 각반지름을 계산한다. · 입력 단위 변환과 적용 조건을 확인하고 고리 각반지름 θ_E 한 값을 계산합니다.">
+<link rel="canonical" href="https://nanalab.kr/eng-einstein-ring/"><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="아인슈타인 고리 각반지름 계산기"><meta property="og:description" content="관측자·점렌즈·광원이 정렬된 근거리 유클리드 기하에서 아인슈타인 고리의 각반지름을 계산한다."><meta property="og:url" content="https://nanalab.kr/eng-einstein-ring/"><meta property="og:image" content="https://nanalab.kr/eng-einstein-ring/og.png"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "아인슈타인 고리 각반지름 계산기", "url": "https://nanalab.kr/eng-einstein-ring/", "description": "관측자·점렌즈·광원이 정렬된 근거리 유클리드 기하에서 아인슈타인 고리의 각반지름을 계산한다.", "applicationCategory": "EducationalApplication", "operatingSystem": "Any", "inLanguage": "ko", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "NaNa Lab", "url": "https://nanalab.kr/"}}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767176956440077"
+        crossorigin="anonymous"></script>
+<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })
+            (window, document, 'script', 'dataLayer', 'GTM-NV2WWQXB');
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZYSF0173P"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2ZYSF0173P');
+    </script>
+</head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NV2WWQXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#calculator">계산 입력으로 이동</a>
+<header><a class="brand" href="https://nanalab.kr/">NaNa Lab <span aria-hidden="true">/</span> Engineering</a><span class="edition">E106 · 우주·천체</span></header>
+<main><p class="eyebrow">ONE FORMULA, ONE ANSWER</p><h1>아인슈타인 고리 각반지름 계산기</h1><p class="intro">관측자·점렌즈·광원이 정렬된 근거리 유클리드 기하에서 아인슈타인 고리의 각반지름을 계산한다.. 입력 단위를 선택하고 조건에 맞는 한 값을 구하세요.</p>
+<div class="workspace"><section class="panel"><h2>계산할 값</h2><form id="calculator" novalidate><div class="row"><label for="field-mass">점렌즈 질량 M</label><div class="input-pair"><input id="field-mass" name="mass" type="text" inputmode="decimal" value="1.98847e+30" required autocomplete="off" spellcheck="false" aria-describedby="note-mass"><select id="unit-mass" name="unit-mass" aria-label="점렌즈 질량 M 단위"><option value="kg" selected>kg</option><option value="g">g</option><option value="u">u</option></select></div><p class="field-note" id="note-mass">SI 변환 후 0보다 큰 값</p></div><div class="row"><label for="field-lens">관측자에서 렌즈까지 거리 D_L</label><div class="input-pair"><input id="field-lens" name="lens" type="text" inputmode="decimal" value="1e+17" required autocomplete="off" spellcheck="false" aria-describedby="note-lens"><select id="unit-lens" name="unit-lens" aria-label="관측자에서 렌즈까지 거리 D_L 단위"><option value="m">m</option><option value="km" selected>km</option><option value="cm">cm</option><option value="mm">mm</option><option value="um">μm</option><option value="nm">nm</option><option value="pm">pm</option><option value="AU">AU</option><option value="pc">pc</option></select></div><p class="field-note" id="note-lens">SI 변환 후 0보다 큰 값</p></div><div class="row"><label for="field-source">관측자에서 광원까지 거리 D_S</label><div class="input-pair"><input id="field-source" name="source" type="text" inputmode="decimal" value="2e+17" required autocomplete="off" spellcheck="false" aria-describedby="note-source"><select id="unit-source" name="unit-source" aria-label="관측자에서 광원까지 거리 D_S 단위"><option value="m">m</option><option value="km" selected>km</option><option value="cm">cm</option><option value="mm">mm</option><option value="um">μm</option><option value="nm">nm</option><option value="pm">pm</option><option value="AU">AU</option><option value="pc">pc</option></select></div><p class="field-note" id="note-source">SI 변환 후 0보다 큰 값</p></div><label class="condition"><input type="checkbox" name="conditions" id="conditions">근거리 유클리드 거리·완전 정렬·점렌즈·가려짐 없는 외부 광선 조건을 확인했습니다.</label><div class="actions"><button class="primary" type="submit">계산하기</button><button type="button" id="example">예제 넣기</button><button type="button" id="reset">비우기</button></div></form><p class="local-note">계산은 이 브라우저에서 처리합니다. 지수 표기(예: 1.2e-3)를 사용할 수 있습니다.</p><noscript>계산에는 JavaScript가 필요합니다. 아래 공식과 적용 조건은 그대로 읽을 수 있습니다.</noscript></section>
+<section id="result" class="panel output-panel" aria-labelledby="result-heading"><h2 id="result-heading">계산 결과</h2><p class="result-caption">고리 각반지름 θ_E</p><output id="result-value" class="number" form="calculator" aria-live="polite">—</output><span id="output-unit-label" class="result-unit"></span><div id="output-control"><label for="output-unit">결과 표시 단위</label><select id="output-unit"><option value="rad">rad</option><option value="deg">°</option><option value="arcmin">′</option><option value="arcsec" selected>″</option></select></div><p id="status" class="status" role="status">입력 후 계산하기를 누르세요.</p><button type="button" id="copy-result" class="copy">결과 복사</button><div class="formula"><span>FORMULA</span><p>θ_E = √[(4GM/c²)(D_S−D_L)/(D_L D_S)]</p></div></section></div>
+<section class="reference"><h2>적용 조건</h2><p>M&gt;0, D_S&gt;D_L&gt;0. 완전 정렬·점질량·얇은 렌즈·약한장·작은각 근사다. 여기서는 유클리드 거리 D_LS=D_S−D_L를 사용한다. 우주론적 각지름거리에 이 뺄셈을 적용하면 안 된다. 앱은 θ_E≤0.1 rad와 충돌매개변수 b=D_Lθ_E≥100r_s를 요구한다. 광선은 렌즈 물질 바깥을 지나며 가려짐이 없어야 한다. 확장 질량분포·강한장·비정렬·우주 팽창을 제외한다.</p><p class="small">표시값은 부동소수점 근삿값입니다. 설계 안전계수와 입력하지 않은 오차 요인은 계산하지 않습니다.</p><details><summary>공식 근거와 제작 정보</summary><ul><li><a href="https://www.astro.umd.edu/~mcmiller/teaching/astr422/lecture13.pdf" target="_blank" rel="noopener noreferrer">University of Maryland · Point-mass Einstein angular radius, Eq. 7</a></li></ul><p class="small">코드·설명·아이콘·대표 이미지는 NaNa Lab에서 직접 작성했습니다. 연결된 자료의 본문·도판·코드를 복제하지 않았습니다.</p><p class="small">상수 기준: <a href="https://physics.nist.gov/cuu/Constants/">NIST / CODATA 2022</a>. μ₀·ε₀는 측정 기반 권고값이며 정의상수가 아닙니다. 사용 값과 정확성 구분은 <a href="SOURCES.md">출처 기록</a>에 있습니다.</p><p class="small">이 사이트에는 Google 광고·분석 및 Cloudflare 분석 코드가 포함됩니다.</p></details></section></main>
+<footer>© 2026 NaNa Lab · 직접 작성한 단일 수치 공학 도구 · <a href="https://github.com/NaNaCompany/eng-einstein-ring">소스 코드</a></footer><a class="more-apps" href="https://nanalab.kr/apps/">More Apps</a>
+<script type="module" src="app.js"></script>
+<script>
+(function () {
+  function ensureBeacon() {
+    // Cloudflare may inject its beacon at the edge. Reuse that script when present.
+    if (document.querySelector('script[src*="static.cloudflareinsights.com/beacon.min.js"]')) return;
+    var beacon = document.createElement('script');
+    beacon.defer = true;
+    beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    beacon.setAttribute('data-cf-beacon', JSON.stringify({token: '9f3423bb0d034d91bbe1a12afeff2429'}));
+    document.head.appendChild(beacon);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBeacon, {once: true});
+  else ensureBeacon();
+})();
+</script>
+</body></html>
